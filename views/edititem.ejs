@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Edit Item</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body class="container" style="margin-top: 50px;">
+	<% if (messages.error) { %>
+	<div class="alert alert-danger" role="alert"><%- messages.error %></div>
+	<% } %>
+    <div class="card"> 
+    	<div class="card-header">
+			Edit item
+		</div>
+        <div class="card-body">
+            <form action="/item/update/<%= id %>" method="post">
+                
+                <div class="form-group">
+                    <label>Id:</label>
+                    <input type="text" class="form-control" name="id" value="<%= id %>" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>Prod_id:</label>
+                    <input type="text" class="form-control" name="prod_id" value="<%= prod_id %>" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>Ref_id:</label>
+                    <input type="text" class="form-control" name="ref_id" value="<%= ref_id %>" autocomplete="off">
+                </div>
+               
+                 <div class="form-group">
+                    <label>Item Name:</label>
+             <input type="text" class="form-control" name="item_name" value="<%= item_name %>" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>Item Category:</label>
+             <input type="text" class="form-control" name="category" value="<%= item_cat %>" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>Item Description:</label>
+             <input type="text" class="form-control" name="item_desc" value="<%= item_desc %>" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>Item Type:</label>
+             <input type="text" class="form-control" name="item_type" value="<%= item_type %>" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>Manufacturer:</label>
+             <input type="text" class="form-control" name="name_manuf" value="<%= name_manuf %>" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>Item Weight:</label>
+             <input type="text" class="form-control" name="item_weight" value="<%= item_weight %>" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>Deler name:</label>
+             <input type="text" class="form-control" name="item_delar" value="<%= item_delar %>" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>Vendar Name:</label>
+             <input type="text" class="form-control" name="item_vendor" value="<%= item_vendor %>" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>Item Quantity:</label>
+             <input type="text" class="form-control" name="item_qty" value="<%= item_qty %>" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>Min Quantity:</label>
+             <input type="text" class="form-control" name="min_qty" value="<%= min_qty %>" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>Max Quantity:</label>
+             <input type="text" class="form-control" name="max_qty" value="<%= max_qty %>" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>Status:</label>
+             <input type="text" class="form-control" name="item_status" value="<%= item_status %>" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>Location:</label>
+             <input type="text" class="form-control" name="location" value="<%= location %>" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>NFC:</label>
+             <input type="text" class="form-control" name="nfc" value="<%= nfc %>" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>Barcode:</label>
+             <input type="text" class="form-control" name="barcode_id" value="<%= barcode_id %>" autocomplete="off">
+                </div>
+                <div>
+                    <label for="meeting-time">Check_intime:</label>
+                                 <input type="datetime-local" id="meeting-time" name="ch_intime" value="2018-06-12T19:30" min="2018-06-07T00:00" max="2018-06-14T00:00">
+                </div>
+                <div>
+            <label for="meeting-time">Check_outtime:</label>
+                         <input type="datetime-local" id="meeting-time" name="ch_outtime" value="2018-06-12T19:30" min="2018-06-07T00:00" max="2018-06-14T00:00">
+                </div>  
+
+                <div class="form-group">
+                    <input type="submit" class="btn btn-info" value="Update"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+                

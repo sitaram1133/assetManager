@@ -1,0 +1,91 @@
+<%- include('header'); -%>	
+<body>
+	<div class="container col-sm-12" id="mainform">
+		<div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<div class="panel-title">User Sign Up</div>
+					
+				</div> 
+				<div class="panel-body" >
+					<form class="form-horizontal" role="form" method="post" action="/signup">
+						<% if (message.length > 0) { %>
+						<div class="alert alert-success col-sm-12"><%= message %></div>
+						<% } %>
+						<div id="signupalert" style="display:none" class="alert alert-danger">
+							<p>Error:</p>
+							<span></span>
+						</div>
+						<div class="form-group">
+							<label for="first_name" class="col-md-3 control-label">First Name</label>
+							<div class="col-md-9">
+								<input type="text" class="form-control" name="first_name" placeholder="First Name">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="last_name" class="col-md-3 control-label">Last Name</label>
+							<div class="col-md-9">
+								<input type="text" class="form-control" name="last_name" placeholder="Last Name">
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="mobileno" class="col-md-3 control-label">Mobile No</label>
+							<div class="col-md-9">
+								<input type="number"  id="my-input" class="form-control" name="mobileno" placeholder="91########" value="" required>
+							</div>
+						</div>	
+	
+						<div class="form-group">
+							<label for="password" class="col-md-3 control-label"> Password</label>
+							<div class="col-md-9">
+								<input type="password" id="password" name="password" class="form-control"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required placeholder="password">
+							</div>
+						</div>	
+						
+						<div class="form-group">
+							<label for="confirmpassword" class="col-md-3 control-label">ConfirmPassword</label>
+							<div class="col-md-9">
+								<input type="password" id="confirmpassword" name="confirmpassword" class="form-control"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required placeholder="password">
+							</div>
+						</div>	
+						
+						</div>	
+					<div class="form-group">						            
+							<div class="col-md-offset-3 col-md-9">
+								<button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
+							</div>
+						</div>
+						<a href="/login">Already registered? Login</a>
+					</div>
+					
+				
+				
+			</div>
+				</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+        function validate() {
+  
+            var user = document.getElementById("c").value;
+            var user2 = document.getElementById("c");
+            var re = /^[7-9][0-9]{9}$/;
+            if (re.test(user)) {
+                alert("done");
+                return true;
+            }
+            else {
+  
+                user2.style.border = "red solid 3px";
+                return false;
+            }
+        }
+    </script>
+	
+</body>
+<%- include('footer'); -%>
+
